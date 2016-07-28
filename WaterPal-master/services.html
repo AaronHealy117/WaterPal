@@ -1,0 +1,212 @@
+<!Doctype html>
+<html> 
+	
+	
+	<head>
+<style>
+</style>
+		<title> WaterPal Industries Ltd</title>
+		<script src=http://code.jquery.com/jquery-latest.min.js></script>
+		<link rel="stylesheet" type="text/css" href="CSS/style3.css">
+
+	</head>
+	
+	<body> 
+		<div id="MenuBar"> 
+			<a href="index.html"><div id = "menu1" class = "menubarclass"> <img src="images/waterpal.jpg" alt="waterpal" width="100%" height="80px"> </div></a>
+			<a href="index.html"><div id = "menu2"class = "menubarclass"> <p><p>Home </p></p> </div> </a>
+			<a href="about.html"><div id = "menu3" class = "menubarclass"> <p><p>About Us </p></p> </div></a>
+			<a href="services.html"><div id = "menu4" class = "menubarclass"> <p><p>Our Services</p></p></div></a> 
+			<a href="contact.html"><div id = "menu5" class = "menubarclass"> <p><p> Contact Us </p></p> </div></a>	
+		</div>	
+		
+		<div id="Middle">
+			<div id="leftmiddle">
+			
+				<div id="container">
+				<ul>	
+				<li><img src="images/picture3.jpg" width="604" height="420" /></li>
+				<li><img src="images/picture1.jpg" width="604" height="420" /></li>
+				<li><img src="images/picture2.jpg" width="604" height="420" /></li>
+				<li><img src="images/keith.jpg" width="604" height="420" /></li>
+				<li><img src="images/picture4.jpg" width="604" height="420" /></li>
+				<li><img src="images/picture5.jpg" width="604" height="420" /></li>
+				
+			
+				</ul>
+				<span class="button prevButton"></span>
+				<span class="button nextButton"></span>
+				</div>
+				</center>
+
+				<script src="../jquery-1.4.2.min.js"></script>
+				</div>
+			
+			<div id="rightmiddle"> <p id="servicesPar1"> Here at WaterPal we have strived to create a stress-free application that is extremely user friendly and easy to use. 
+				Although we have IT support available in our business, our goal is to see that our customers have a hassle free experience.
+				The idea behind our application is to help the citizens of Ireland easily plan out and monitor their by-yearly charges. 
+				Our developers have worked hard to make the WaterPal app as user friendly as possible, and easy to navigate.</p> 
+				
+				<p id="servicesPar2">Here is a list of the different services we provide:</p>
+				
+				<br>
+				<p class = "providedServices"> - Breakdown Of Water Charges Per Household</p>
+				<p class = "providedServices">- Total Charges For Specific Houses Per Annum</p>
+				<p class = "providedServices ">- Free Downloadable App</p>
+				<p class = "providedServices">- Website With IT Support And Backup</p>
+				<p class = "providedServices">- Water Meter Installations</p>
+				<p class = "providedServices">- Extensive IT and customer support</p>
+				
+			</div>
+		</div>
+		
+	
+
+
+		<div id="Bottom">
+			<div id="one">
+			<p>Enhance your WaterPal experience!</p>
+			<a href = "https://www.facebook.com/">
+			<img src="images/FacebookLogo.png" alt="facebook" width="150" height="45">
+			</a>
+			<p> </p>
+			<a href = "https://twitter.com/?lang=en">
+			<img src="images/TwitterLogo.jpg" alt="twitter" width="150" height="45">
+			</a>
+			</div>
+			<div id="two">
+			<p>Our Senior Engineers:<p>
+			<br>John Monaghan</br>
+			<br>Larry Hogan</br>
+			<br>Sean McCabe</br>
+			<br>Patrick O'Brien </br>
+			</div>
+			<div id="three"> 
+			<p>Our IT Support Managers:</p>
+			<br>Pearse Neeson<br>
+			<br>Paul Howie</br>
+			<br>Alan Wallace</br>
+			<br>Aoife Kayleen</br></div>
+			
+			<div id="four">
+			<p>Our Developers:<p>
+			<br>Leon Mulvaney </br>
+			<br>Aaron Healy</br>
+			<br>Alex Russell</br>
+			<br>Keith Ferguson</br>
+
+			</div>
+			<div id="five">
+			<p>Download the App:</p>
+			<a href="https://play.google.com/store?hl=en">
+			<img src="images/googleplay.png" alt="googleplay" width="150" height="45" border ="0"> 
+			</a>
+			<p> </p>	
+			<a href = "http://www.apple.com/ie/itunes/features/?ls=1&at=10lpgy&ct=000000-ie-g-brand&cid=wwa-ie-kwg-music-itu#store">
+			<img src="images/appstore.png" alt="appstore" width="150" height="45">
+			</a>
+			</div>
+		</div>
+		
+			<div id ="final"> 
+			<form action = "index.html">
+			Connect with us:
+			<input type="email" name="email" value="">
+			<button onclick = "myFunction3()"class = "newsletterbutton"type="submit"> Subscribe to our newsletter </button>
+			</form>
+
+			Copyright 2014 WaterPalSoftware Ltd. All rights reserved. WaterPal is a Trade Mark of WaterPal Software Ltd. 
+		</div>
+		
+	<script>
+$(window).load(function(){
+		var pages = $('#container li'), current=0;
+		var currentPage,nextPage;
+		var timeoutID;
+		var buttonClicked=0;
+
+		var handler1=function(){
+			buttonClicked=1;
+			$('#container .button').unbind('click');
+			currentPage= pages.eq(current);
+			if($(this).hasClass('prevButton'))
+			{
+				if (current <= 0)
+					current=pages.length-1;
+				else
+					current=current-1;
+				nextPage = pages.eq(current);	
+
+				nextPage.css("marginLeft",-604);
+				nextPage.show();
+				nextPage.animate({ marginLeft: 0 }, 800,function(){
+					currentPage.hide();
+				});
+				currentPage.animate({ marginLeft: 604 }, 800,function(){
+					$('#container .button').bind('click',handler1);
+				});
+			}
+			else
+			{
+
+				if (current >= pages.length-1)
+					current=0;
+				else
+					current=current+1;
+				nextPage = pages.eq(current);	
+
+				nextPage.css("marginLeft",604);
+				nextPage.show();
+				nextPage.animate({ marginLeft: 0 }, 800,function(){
+				});
+				currentPage.animate({ marginLeft: -604 }, 800,function(){
+					currentPage.hide();
+					$('#container .button').bind('click',handler1);
+				});
+			}		
+		}
+
+		var handler2=function(){
+			if (buttonClicked==0)
+			{
+			$('#container .button').unbind('click');
+			currentPage= pages.eq(current);
+			if (current >= pages.length-1)
+				current=0;
+			else
+				current=current+1;
+			nextPage = pages.eq(current);	
+			nextPage.css("marginLeft",604);
+			nextPage.show();
+			nextPage.animate({ marginLeft: 0 }, 800,function(){
+			});
+			currentPage.animate({ marginLeft: -604 }, 800,function(){
+				currentPage.hide();
+				$('#container .button').bind('click',handler1);
+			});
+			timeoutID=setTimeout(function(){
+				handler2();	
+			}, 4000);
+			}
+		}
+
+		$('#container .button').click(function(){
+			clearTimeout(timeoutID);
+			handler1();
+		});
+
+		timeoutID=setTimeout(function(){
+			handler2();	
+			}, 4000);
+		
+});
+
+</script>
+		<script>
+			function myFunction3() {
+			alert("Thank you for signing up to the WaterPal newsletter! You will recieve a confirmation email shortly, alongside a welcome pack ");
+			}
+		</script>
+	</body>
+	
+</html>

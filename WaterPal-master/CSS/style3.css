@@ -1,0 +1,348 @@
+body
+{
+font-family:calibri;
+margin:0;
+padding:0;
+}
+
+
+ul {
+list-style-type: none;
+margin: 0;
+padding:0 ;
+overflow: hidden;
+}
+
+li {
+float: left;
+}
+
+.menubarclass:link, .menubarclass :visited {
+display: block;
+width: 100%;
+font-weight: bold;
+color: #FFFFFF;
+background-color: #003366;
+text-align: center;
+padding: 35px;
+text-decoration: none;
+text-transform: uppercase;
+
+}
+
+.menubarclass:hover
+{
+background-color: #FF6633;
+}
+
+.menubarclass:active {
+background-color:#FF6633;
+}
+
+
+	
+#MenuBar
+{
+width:100%;
+height:80px;
+background:#003366;
+font-size:22px;
+font-weight:bold;
+text-align:center;
+}
+/* Unvisited Links */
+a:link{
+color:white;
+}
+
+/* Visited links */
+a:visited
+{
+color:white;
+}
+
+#menu1,#menu2,#menu3,#menu4,#menu5
+{
+width:20%;
+height:80px;
+float:left;
+}
+
+
+
+
+#Middle
+{
+margin-top:35px;
+width:100%;
+height:540px;
+}
+
+#leftmiddle
+{
+width:50%;
+height:540px;
+float:left;
+}
+
+#rightmiddle
+{
+width:50%;
+height:540px;
+float:right;
+}
+
+
+#servicesPar1
+{
+color:#FF6633;
+font-size:20px;
+font-weight:bold;
+line-height:95%;
+}
+
+#servicesPar2
+{
+color:#FF6633;
+font-size:20px;
+font-weight:bold;
+line-height:95%;
+}
+
+
+
+.providedServices
+{
+color:#FF6633;
+font-size:20px;
+font-weight:bold;
+line-height:20%;
+}
+
+#Bottom
+{
+width:100%;
+height:200px;
+background:#003366;
+}
+
+
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+}
+
+li {
+ float: left;
+ }
+
+li a:link, li a:visited {
+display: block;
+width: 200px;
+font-weight: bold;
+color: #FFFFFF;
+background-color: #003366;
+text-align: center;
+padding: 35px;
+text-decoration: none;
+text-transform: uppercase;
+}
+
+li a:hover, li a:active {
+background-color: #FF6633;
+}
+
+#Bottom  /*Note- divs One to Five below are inside this div*/
+{
+width:100%;
+height:150px;
+
+}
+
+	
+#one
+{
+width:20%;
+height:150px;
+background:#1A3366;
+line-height:8px;
+color:#FF6633;
+font-weight:bold;
+font-size:15px;
+text-align:center;
+float:left;
+}
+
+#one img{
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+#two
+{
+width:20%;
+height:150px;
+background:#1A3366;
+line-height:8px;
+color:#FF6633;
+font-weight:bold;
+font-size:15px;
+float:left;
+}
+
+#three
+{
+width:20%;
+height:150px;
+background:#1A3366;
+line-height:8px;
+color:#FF6633;
+font-weight:bold;
+font-size:15px;
+float:left;
+}
+
+#four
+{
+width:20%;
+height:150px;
+background:#1A3366;
+line-height:8px;
+color:#FF6633;
+font-weight:bold;
+font-size:15px;
+float:left;
+}
+
+#five
+{
+width:20%;
+height:150px;
+background:#1A3366;
+line-height:8px;
+color:#FF6633;
+font-weight:bold;
+font-size:15px;
+float:left;
+text-align:center;
+}
+
+#five img{
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+#final
+{
+width:100%;
+height:50px;
+background:	#00143D;
+font-family:calibri;
+color:#FF6633;
+font-weight:bold;
+text-align: center;
+font-size:13px;
+}
+
+#par1
+{
+color:#FF6633;
+font-weight:bold;
+font-size:24px;
+}
+
+#par2
+{
+color:#FF6633;
+font-size:16px;
+}
+
+
+.newsletterentry
+{
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+border:1px solid #00143D;
+padding:5px;
+
+}
+
+.newsletterbutton
+{
+background:;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+border: 1px solid #00143D;
+padding: 5px;
+font-size:13px;
+}
+
+.newsletterbutton:hover{
+     background:#FF6633;
+}
+
+
+
+#container{
+
+	width:604px;
+	height:453px;
+	position:relative;
+	position:center;
+	margin-left:20px;
+	 box-shadow: 5px 5px 2.5px #888888;
+	 
+	
+}
+
+#container .prevButton{
+	height:72px;
+	width:68px;
+	position:absolute;
+	background:url('../images/buttons.png') no-repeat;
+	top:50%;
+	margin-top:-36px;
+	cursor:pointer;
+	z-index:2000;
+	background-position:left top;
+	left:0
+}
+
+#container .prevButton:hover{ background-position:left bottom;left:0;}
+
+#container .nextButton{
+	height:72px;
+	width:68px;
+	position:absolute;
+	background:url('../images/buttons.png') no-repeat;
+	top:50%;
+	margin-top:-36px;
+	cursor:pointer;
+	z-index:2000;
+	background-position:right top;
+	right:0
+}
+
+#container .nextButton:hover{background-position:right bottom;right:0;}
+
+#container ul{
+	width:604px;
+	height:453px;
+	list-style:none outside none;
+	position:relative;
+	overflow:hidden;
+}
+
+#container li:first-child{
+	display:list-item;
+	position:absolute;
+}
+
+#container li{
+	position:absolute;
+	display:none;
+}
